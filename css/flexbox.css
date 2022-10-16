@@ -1,0 +1,38 @@
+
+.headerPrincipal-nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button1, .button2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.subrayado{
+    display:flex;
+    justify-content: center;
+    padding: 30px;
+}
+.agregar .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.botones-secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botones-in-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

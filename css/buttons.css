@@ -1,0 +1,125 @@
+.start{
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+}
+.start:hover{
+    color: #111;
+}
+.start::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.start:hover::before {
+    width: 105%;
+}
+
+
+.anhadir-palabra{
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 12em;
+    height: 2.4em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+.anhadir-palabra:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 180px;
+    width: 250px;
+    border-radius: 50%;
+}   
+.anhadir-palabra:hover {
+    color: #fff;
+}   
+.anhadir-palabra:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+.anhadir-palabra:hover:before {
+    top: -30px;
+    left: -30px;
+}
+.anhadir-palabra:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
+
+
+.boton-new-game, .boton-salir{
+    padding: 10px;
+    margin: 10px 10px;
+    color: #090a0b;
+    text-decoration: none;
+    transition: .5s;
+    display: block;
+    border: none;
+    border-radius: 0.6em;
+    font-weight: bold;
+}
+.boton-new-game:hover, .boton-salir:hover{
+    background: rgb(10, 9, 9);
+    color: rgb(175, 169, 169);
+    transform: scale(1.2);
+	font-weight: bold;
+}
+
+
+.guardar, .cancelar{
+    padding: 10px;
+    margin: 10px 10px;
+    color: #090a0b;
+    text-decoration: none;
+    transition: .5s;
+    display: block;
+    border: none;
+    border-radius: 0.6em;
+    font-weight: bold;
+}
+.guardar:hover, .cancelar:hover{
+    background: rgb(10, 9, 9);
+    color: rgb(175, 169, 169);
+    transform: scale(1.2);
+	font-weight: bold;
+}
+
+@media(min-width: 769px){
+    .guardar, .cancelar{
+        width: 200%;
+    }
+    .boton-new-game, .boton-salir{
+        width: 10%;
+    }
+}

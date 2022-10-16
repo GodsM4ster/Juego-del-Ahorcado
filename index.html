@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="headerPrincipal">
+            <div class="container">
+                <h1 class="header-titulo">JUEGO DEL AHORCADO VERSION ANIME</h1>         
+                <nav class="headerPrincipal-nav">
+                    <ul class="headerPrincipal-nav-link">
+                        <li><a href="https://www.linkedin.com/in/edwin-marin-181370248/" ><img src="assets/linkedin-logo.png" alt="logo linkedin" class="headerPrincipal-nav-link-items"></a></li>
+                        <li><a href="https://github.com/GodsM4ster" ><img src="assets/github.png" alt="logo github" class="headerPrincipal-nav-link-items"></a></li>
+                        <li><a href="https://www.instagram.com/bamahue/" ><img src="assets/instagram1.png" alt="logo instagram" class="headerPrincipal-nav-link-items"></a></li>
+                    </ul> 
+                </nav>
+            </div>       
+        </header>
+        
+        <main class="game">
+            <div class="general">
+            <!-- botones del juego -->
+                <section class="button1" id="desaparece">
+                    <button class="start" type="buttom" id="play" onclick="iniciarJuego()" >Iniciar juego</button>    
+                    <button class="anhadir-palabra" type="buttom" id="add-palabra" onclick="agregarPalabra()">Agregar nueva palabra</button>
+                </section>
+                
+                <!-- pantalla para agregar palabras-->
+                <section id="add" class="agregar">
+                    <div class="container">
+                        <textarea placeholder="Ingrese la palabra..." class="campo-texto" id="texto-recibido" ></textarea>
+                        <div class="mensaje-advertencia">                    
+                            <p class="mensaje">
+                                <img src="assets/adver.jpg" alt="Imagen Fullmetal Alchimist" class="simbolo">
+                                Solo palabras sin tildes.
+                            </p>
+                        </div>
+                        
+                        <div class="botones-secundario">
+                            <button class="guardar" type="submit" id="save" onclick="guardarEmpezar()">Guardar y Jugar</button>
+                            <button class="cancelar" type="submit" id="cancelar" onclick="cancelar()">Cancelar</button>
+                        </div> 
+                    </div>      
+                </section>
+                <!-- dibujar palabras y muñeco -->
+                <section class="canvas" id="area-game">
+                    <!--panel de dibujo  -->
+                    <div class="subrayado" id="canvas-responsive">
+                        <canvas class="response" id="horca" width="600" height="600"></canvas>                       
+                    </div>
+                    <!-- botones del canva -->
+                    <div class="botones-in-game">
+                        <button class="boton-new-game" type="submit" id="new-game" onclick="iniciarJuego()">Nuevo juego</button>
+                        <button class="boton-salir" type="submit" value="" id="salir" onclick="desistir()">Salir</button>
+                    </div>
+                </section>
+            </div>
+
+            <video class="anime-video" muted autoplay loop src="assets/animemix.mp4"></video>
+            <div class="capa"></div>
+        </main>
+        <!-- nota al pie -->
+        <footer>
+            <img src="assets/godsm4ster.png" class="logo-personal">
+            <p class="copyright">&copy; by GodsM4ster</p>
+        </footer>
+    </div>
+    <script src="javascrip/horca.js"></script>
+    <script src="javascrip/canvas.js"></script>
+</body>
+
+</html>
