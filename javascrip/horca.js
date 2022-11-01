@@ -150,7 +150,7 @@ function iniciarJuego() {
           }
         }
         /*si el usuario cometió más errores de los que son permitidos, 
-        llama las funciones que dibujan el ahorcado y exibe el mensaje de game over*/
+        llama las funciones que dibujan el ahorcado y exhibe el mensaje de game over*/
         else {
           if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) return
           dibujarAhorcado(errores);
